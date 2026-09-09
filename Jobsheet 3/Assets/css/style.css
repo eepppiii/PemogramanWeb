@@ -34,7 +34,7 @@ header {
   padding: 1rem 1.5rem;
   background-color: #1d5b8a;
   color: #fff;
-  position: relative; /* Penting untuk posisi menu dropdown di HP */
+  position: relative;
 }
 
 header h1 {
@@ -58,7 +58,6 @@ header nav a:hover {
   opacity: 0.8;
 }
 
-/* --- Trik Checkbox Hamburger (Disembunyikan di Laptop/PC) --- */
 .menu-checkbox {
   display: none;
 }
@@ -130,6 +129,11 @@ main section:nth-of-type(2) article p {
 /* ========================================================= */
 /* ===== 5. TABEL (Halaman Daftar Seni & Anggota) ===== */
 /* ========================================================= */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -173,12 +177,12 @@ td button:hover {
 }
 
 td button:first-of-type {
-  background-color: #f0ad4e; /* Warna Oranye untuk tombol Edit */
+  background-color: #f0ad4e;
   color: #fff;
 }
 
 td button:last-of-type {
-  background-color: #d9534f; /* Warna Merah untuk tombol Hapus */
+  background-color: #d9534f;
   color: #fff;
 }
 
