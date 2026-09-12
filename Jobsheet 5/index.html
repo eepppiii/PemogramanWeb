@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seni Theatrisic</title>
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Seni Theatrisic</h1>
-      
-      <!-- Tombol Hamburger -->
-      <input type="checkbox" id="menu-toggle" class="menu-checkbox" style="display:none;"/>
-      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Seni Theatrisic</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🎭 Seni Theatrisic</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" style="display:none;"/>
+    <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="Seni/list.html">Daftar Seni</a></li>
+        <li><a href="Seni/tambah.html">Tambah Seni</a></li>
+        <li><a href="Anggota/list.html">Daftar Anggota</a></li>
+        <li><a href="Anggota/tambah.html">Tambah Anggota</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="Seni/list.html">Daftar Seni</a></li>
-          <li><a href="Seni/tambah.html">Tambah Seni</a></li>
-          <li><a href="Anggota/list.html">Daftar Anggota</a></li>
-          <li><a href="Anggota/tambah.html">Tambah Anggota</a></li>
-        </ul>
-      </nav>
-    </header>
+  <main>
+    <section>
+      <h2>Selamat Datang di Portal Admin</h2>
+      <p>Kelola divisi seni dan data keanggotaan organisasi Seni Theatrisic dengan mudah dan cepat.</p>
+    </section>
 
-    <main>
-      <section>
-        <h2>Selamat datang di Dashboard Seni Theatrisic</h2>
-        <p>Aplikasi Sederhana untuk mengelola data seni dan anggota Seni Theatrisic.</p>
-      </section>
+    <h2>Ringkasan Data</h2>
+    <section>
+      <article>
+        <h3>Total Divisi Seni</h3>
+        <p id="total-seni">0</p>
+      </article>
+      <article>
+        <h3>Total Anggota Aktif</h3>
+        <p id="total-anggota">0</p>
+      </article>
+    </section>
+  </main>
 
-      <h2>Ringkasan</h2>
-      <section>
-        <article>
-          <h3>Total Seni</h3>
-          <p>0</p>
-        </article>
-        <article>
-          <h3>Total Anggota</h3>
-          <p>0</p>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Seni Theatrisic &mdash; Jobsheet 1</p>
-    </footer>
-
-    <!-- Link JavaScript -->
-    <script src="assets/js/script.js"></script>
-  </body>
+  <footer>
+    <p>&copy; 2026 Seni Theatrisic &mdash; Sistem Manajemen Organisasi</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
 </html>

@@ -1,57 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seni Theatrisic - Daftar Anggota</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Seni Theatrisic</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Anggota | Seni Theatrisic</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🎭 Seni Theatrisic</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" style="display:none;"/>
+    <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="../Seni/list.html">Daftar Seni</a></li>
+        <li><a href="../Seni/tambah.html">Tambah Seni</a></li>
+        <li><a href="list.html">Daftar Anggota</a></li>
+        <li><a href="tambah.html">Tambah Anggota</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <input
-        type="checkbox"
-        id="menu-toggle"
-        class="menu-checkbox"
-        style="display: none"
-      />
-      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+  <main>
+    <section>
+      <h2>Registrasi Anggota Baru</h2>
+      <form id="form-anggota" onsubmit="simpanAnggota(event)">
+        <p>
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Masukkan nama lengkap..." required />
+        </p>
+        <p>
+          <label for="no_anggota">Nomor ID Anggota</label>
+          <input type="text" id="no_anggota" placeholder="Contoh: A-001" required />
+        </p>
+        <p>
+          <label for="alamat">Alamat Domisili</label>
+          <input type="text" id="alamat" placeholder="Masukkan kota atau alamat lengkap..." required />
+        </p>
+        <p>
+          <label for="no_hp">No. Handphone / WhatsApp</label>
+          <input type="text" id="no_hp" placeholder="Contoh: 08123456789" required />
+        </p>
+        <p>
+          <button type="submit">💾 Simpan Data Anggota</button>
+        </p>
+      </form>
+    </section>
+  </main>
 
-      <nav>
-        <ul>
-          <li><a href="../index.html">Beranda</a></li>
-          <li><a href="../Seni/list.html">Daftar Seni</a></li>
-          <li><a href="../Seni/tambah.html">Tambah Seni</a></li>
-          <li><a href="list.html">Daftar Anggota</a></li>
-          <li><a href="tambah.html">Tambah Anggota</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="table-responsive">
-        <h2>Daftar Anggota</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>No. Anggota</th>
-              <th>Nama</th>
-              <th>Alamat</th>
-              <th>No. HP</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <!-- Tbody kosong akan otomatis diisi JavaScript -->
-          <tbody></tbody>
-        </table>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Seni Theatrisic &mdash; Jobsheet 1</p>
-    </footer>
-
-    <script src="../assets/js/script.js"></script>
-  </body>
+  <footer>
+    <p>&copy; 2026 Seni Theatrisic &mdash; Sistem Manajemen Organisasi</p>
+  </footer>
+  <script src="../assets/js/script.js"></script>
+</body>
 </html>

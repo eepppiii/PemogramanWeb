@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seni Theatrisic - Tambah Seni</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Seni | Seni Theatrisic</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <header>
-    <h1>Seni Theatrisic</h1>
-
+    <h1>🎭 Seni Theatrisic</h1>
     <input type="checkbox" id="menu-toggle" class="menu-checkbox" style="display:none;"/>
     <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
-
     <nav>
       <ul>
         <li><a href="../index.html">Beranda</a></li>
@@ -26,36 +24,34 @@
 
   <main>
     <section>
-      <h2>Tambah/Edit Seni</h2>
-      <!-- Action dihapus agar form tidak error dan dihandle oleh JS -->
-      <form>
+      <h2>Registrasi Divisi Seni Baru</h2>
+      <form id="form-seni" onsubmit="simpanSeni(event)">
         <p>
-          <label for="no_divisi">No. Divisi</label>
-          <input type="number" name="no_divisi" id="no_divisi" required />
+          <label for="no_divisi">Nomor Divisi</label>
+          <input type="number" id="no_divisi" placeholder="Contoh: 1" required />
         </p>
         <p>
           <label for="nama_divisi">Nama Divisi</label>
-          <input type="text" name="nama_divisi" id="nama_divisi" required />
+          <input type="text" id="nama_divisi" placeholder="Contoh: Teater Utama" required />
         </p>
         <p>
-          <label for="Keterangan">Keterangan</label>
-          <input type="text" name="Keterangan" id="Keterangan" />
+          <label for="keterangan">Deskripsi / Keterangan</label>
+          <input type="text" id="keterangan" placeholder="Masukkan detail singkat divisi..." required />
         </p>
         <p>
-          <label for="tahun">Tahun Terbit</label>
-          <input type="number" name="tahun" id="tahun" />
+          <label for="tahun">Tahun Terbit / Berdiri</label>
+          <input type="number" id="tahun" placeholder="Contoh: 2024" required />
         </p>
         <p>
-          <button type="submit">Simpan</button>
+          <button type="submit">💾 Simpan Data Seni</button>
         </p>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Seni Theatrisic &mdash; Jobsheet 1</p>
+    <p>&copy; 2026 Seni Theatrisic &mdash; Sistem Manajemen Organisasi</p>
   </footer>
-
   <script src="../assets/js/script.js"></script>
 </body>
 </html>

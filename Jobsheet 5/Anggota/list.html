@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seni Theatrisic - Daftar Anggota</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Seni Theatrisic</h1>
-      
-      <input type="checkbox" id="menu-toggle" class="menu-checkbox" style="display:none;"/>
-      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Anggota | Seni Theatrisic</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🎭 Seni Theatrisic</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" style="display:none;"/>
+    <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="../Seni/list.html">Daftar Seni</a></li>
+        <li><a href="../Seni/tambah.html">Tambah Seni</a></li>
+        <li><a href="list.html">Daftar Anggota</a></li>
+        <li><a href="tambah.html">Tambah Anggota</a></li>
+      </ul>
+    </nav>
+  </header> 
 
-      <nav>
-        <ul>
-          <li><a href="../index.html">Beranda</a></li>
-          <li><a href="../Seni/list.html">Daftar Seni</a></li>
-          <li><a href="../Seni/tambah.html">Tambah Seni</a></li>
-          <li><a href="list.html">Daftar Anggota</a></li>
-          <li><a href="tambah.html">Tambah Anggota</a></li>
-        </ul>
-      </nav>
-    </header> 
+  <main>
+    <section>
+      <h2>Daftar Anggota Organisasi</h2>
 
-    <main>
-      <section class="table-responsive">
-        <h2>Daftar Anggota</h2>
-        <table>
+      <!-- KOTAK PENCARIAN DITAMBAHKAN DI SINI -->
+      <div class="search-container">
+        <input type="text" id="search-anggota" placeholder="🔍 Cari nama, nomor anggota, atau domisili..." onkeyup="cariAnggota()">
+      </div>
+
+      <div class="table-responsive">
+        <table id="tabel-anggota">
           <thead>
             <tr>
-              <th>No. Anggota</th>
-              <th>Nama</th>
-              <th>Alamat</th>
-              <th>No. HP</th>
+              <th>No. ID</th>
+              <th>Nama Lengkap</th>
+              <th>Alamat / Domisili</th>
+              <th>No. WhatsApp</th>
               <th>Aksi</th>
             </tr>
           </thead>
-          <!-- Tbody kosong akan otomatis diisi JavaScript -->
           <tbody>
+            <!-- Diisi JavaScript -->
           </tbody>
         </table>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <p>&copy; 2026 Seni Theatrisic &mdash; Jobsheet 1</p>
-    </footer>
-
-    <script src="../assets/js/script.js"></script>
-  </body>
+  <footer>
+    <p>&copy; 2026 Seni Theatrisic &mdash; Sistem Manajemen Organisasi</p>
+  </footer>
+  <script src="../assets/js/script.js"></script>
+</body>
 </html>

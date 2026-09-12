@@ -1,305 +1,288 @@
-/* ========================================================= */
-/* ===== 1. RESET & BASE ===== */
-/* ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
-
 body {
-  background-color: #f5f6f8;
-  color: #2b2b2b;
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.5;
+  background-color: #f1f5f9;
+  color: #334155;
+  line-height: 1.6;
 }
-
 a {
-  color: #1d5b8a;
+  color: #4f46e5;
   text-decoration: none;
+  transition: color 0.3s;
 }
-
 a:hover {
-  text-decoration: underline;
+  color: #3730a3;
 }
 
-/* ========================================================= */
-/* ===== 2. HEADER & NAVBAR ===== */
-/* ========================================================= */
+/* HEADER & NAVBAR MODERN */
 header {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  background-color: #1d5b8a;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
   color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-
 header h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
-
 header nav ul {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   list-style: none;
 }
-
 header nav a {
-  color: #fff;
+  color: #e2e8f0;
   font-weight: 500;
-  transition: opacity 0.2s ease;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s;
 }
-
 header nav a:hover {
-  text-decoration: none;
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
-
 .hamburger-icon {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  user-select: none;
   color: #fff;
 }
 
-/* ========================================================= */
-/* ===== 3. MAIN LAYOUT & SECTION ===== */
-/* ========================================================= */
+/* KONTEN UTAMA */
 main {
-  max-width: 1000px;
-  margin: 2rem auto;
+  max-width: 1100px;
+  margin: 2.5rem auto;
   padding: 0 1.5rem;
 }
-
 section {
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
 }
-
 section h2 {
+  color: #0f172a;
   margin-bottom: 1rem;
-  color: #1d5b8a;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
 }
-
 main > h2 {
+  color: #1e293b;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #1d5b8a;
-  font-size: 1.2rem;
 }
 
-/* ========================================================= */
-/* ===== 4. KARTU STATISTIK DASHBOARD (Halaman Beranda) ===== */
-/* ========================================================= */
+/* DASHBOARD CARDS */
 main section:nth-of-type(2) {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
 }
-
 main section:nth-of-type(2) article {
-  padding: 1.25rem;
-  background-color: #eef4fa;
-  border-radius: 8px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
 }
-
+main section:nth-of-type(2) article:hover {
+  transform: translateY(-5px);
+}
 main section:nth-of-type(2) article h3 {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #55677a;
-  font-size: 0.95rem;
 }
-
 main section:nth-of-type(2) article p {
-  color: #1d5b8a;
-  font-size: 1.8rem;
+  color: #4f46e5;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
-/* ========================================================= */
-/* ===== 5. TABEL (Halaman Daftar Seni & Anggota) ===== */
-/* ========================================================= */
+/* FITUR SEARCH BAR */
+.search-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.search-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  background-color: #f8fafc;
+}
+.search-container input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  background-color: #fff;
+}
+
+/* TABEL MODERN */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.5rem;
-}
-
-th, td {
-  padding: 0.75rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #e2e6ea;
 }
-
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
 thead {
-  background-color: #1d5b8a;
-  color: #fff;
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-
-tbody tr:nth-child(even) {
-  background-color: #f7f9fb;
+tbody tr {
+  transition: background-color 0.2s;
 }
-
 tbody tr:hover {
-  background-color: #eef4fa;
+  background-color: #f1f5f9;
+}
+td {
+  color: #334155;
+  font-size: 0.95rem;
 }
 
-/* ========================================================= */
-/* ===== 6. TOMBOL (Tabel & Form) ===== */
-/* ========================================================= */
+/* TOMBOL AKSI */
 td button {
-  margin-right: 0.35rem;
   padding: 0.4rem 0.8rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 0.85rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s;
 }
-
-td button:hover {
-  opacity: 0.8;
-}
-
 td button:first-of-type {
-  background-color: #f0ad4e; /* Warna Oranye untuk tombol Edit */
+  background-color: #ef4444;
   color: #fff;
-}
-
-td button:last-of-type {
-  background-color: #d9534f; /* Warna Merah untuk tombol Hapus */
-  color: #fff;
+} /* Tombol Hapus */
+td button:first-of-type:hover {
+  background-color: #dc2626;
 }
 
 form button {
-  padding: 0.6rem 1.5rem;
-  background-color: #1d5b8a;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
   color: #fff;
+  padding: 0.75rem 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   margin-top: 1rem;
 }
-
 form button:hover {
-  background-color: #164869;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
-/* ========================================================= */
-/* ===== 7. FORM (Halaman Tambah Data) ===== */
-/* ========================================================= */
+/* FORM MODERN */
 form p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
-
 form label {
   display: block;
-  margin-bottom: 0.4rem;
-  color: #444;
+  margin-bottom: 0.5rem;
+  color: #475569;
   font-weight: 600;
+  font-size: 0.95rem;
 }
-
-form input,
-form select,
-form textarea {
+form input {
   width: 100%;
-  max-width: 100%;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #cdd4da;
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
   font-size: 1rem;
-  font-family: inherit;
+  background-color: #f8fafc;
+  transition: all 0.3s;
 }
-
-form input:focus,
-form select:focus,
-form textarea:focus {
+form input:focus {
   outline: none;
-  border-color: #1d5b8a;
-  box-shadow: 0 0 0 2px rgba(29, 91, 138, 0.2);
+  border-color: #4f46e5;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
 
-/* ========================================================= */
-/* ===== 8. FOOTER ===== */
-/* ========================================================= */
 footer {
-  padding: 1.25rem;
-  color: #7a8794;
-  font-size: 0.9rem;
   text-align: center;
+  padding: 2rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
 }
 
-/* ========================================================= */
-/* ===== 9. RESPONSIVE DESIGN (HP & TABLET) ===== */
-/* ========================================================= */
-
+/* RESPONSIVE HAMBURGER */
 @media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
   .hamburger-icon {
     display: block;
   }
-
   header nav {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #164869;
+    background-color: #3730a3;
     padding: 1rem 0;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
-
   header nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1rem;
   }
-
   .menu-checkbox:checked ~ nav {
     display: block;
   }
-
   main {
-    margin: 1rem auto;
     padding: 0 1rem;
   }
-  
   section {
-    padding: 1rem;
-  }
-
-  main section:nth-of-type(2) {
-    grid-template-columns: 1fr;
-  }
-
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap; 
-  }
-
-  td button {
-    display: inline-block;
-    margin-bottom: 0.25rem;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-  main section:nth-of-type(2) {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
   }
 }
