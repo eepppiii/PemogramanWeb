@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seni Theatrisic - Daftar Anggota</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Seni Theatrisic</h1>
+
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        class="menu-checkbox"
+        style="display: none"
+      />
+      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="../Seni/list.html">Daftar Seni</a></li>
+          <li><a href="../Seni/tambah.html">Tambah Seni</a></li>
+          <li><a href="list.html">Daftar Anggota</a></li>
+          <li><a href="tambah.html">Tambah Anggota</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="table-responsive">
+        <h2>Daftar Anggota</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>No. Anggota</th>
+              <th>Nama</th>
+              <th>Alamat</th>
+              <th>No. HP</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <!-- Tbody kosong akan otomatis diisi JavaScript -->
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Seni Theatrisic &mdash; Jobsheet 1</p>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
