@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1710000000004,
+    "nama": "Budi Santoso",
+    "no_anggota": "A-001",
+    "alamat": "Jakarta Selatan",
+    "no_hp": "081234567890"
+  },
+  {
+    "id": 1710000000005,
+    "nama": "Siti Aminah",
+    "no_anggota": "A-002",
+    "alamat": "Bandung",
+    "no_hp": "089876543210"
+  },
+  {
+    "id": 1710000000006,
+    "nama": "Andi Pratama",
+    "no_anggota": "A-003",
+    "alamat": "Surabaya",
+    "no_hp": "085555555555"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1710000000001,
+    "no_divisi": "1",
+    "nama_divisi": "Teater Utama",
+    "keterangan": "Divisi utama yang berfokus pada pementasan drama dan teater modern.",
+    "tahun": "2020"
+  },
+  {
+    "id": 1710000000002,
+    "no_divisi": "2",
+    "nama_divisi": "Tari Tradisional",
+    "keterangan": "Divisi yang menampilkan tarian daerah dan pertunjukan budaya.",
+    "tahun": "2021"
+  },
+  {
+    "id": 1710000000003,
+    "no_divisi": "3",
+    "nama_divisi": "Musik Akustik",
+    "keterangan": "Divisi pengiring musik untuk setiap pementasan seni.",
+    "tahun": "2022"
+  }
+]
