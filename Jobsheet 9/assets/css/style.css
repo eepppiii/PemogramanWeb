@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 /* =========================================
-   1. RESET & VARIABEL GLOBAL
+   1. VARIABEL & RESET
    ========================================= */
 :root {
   --primary: #6366f1;
   --primary-dark: #4f46e5;
   --bg-body: #f4f7fb;
-  --bg-card: #ffffff;
   --text-main: #0f172a;
   --text-muted: #64748b;
   --border: #e2e8f0;
@@ -110,7 +109,7 @@ header nav a.active {
 }
 
 /* =========================================
-   3. MAIN & KONTEN
+   3. MAIN & SECTION
    ========================================= */
 main {
   max-width: 1200px;
@@ -120,7 +119,7 @@ main {
 }
 
 section {
-  background: var(--bg-card);
+  background: #fff;
   padding: 2rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -136,21 +135,28 @@ section h2 {
 }
 
 /* =========================================
-   4. PAGE HEADER (Banner)
+   4. BANNER GRADIENT (Page Header & Hero)
    ========================================= */
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.5rem;
+.page-header,
+.hero-section {
+  position: relative;
   padding: 2rem;
   margin-bottom: 2rem;
   background: linear-gradient(135deg, #1e1b4b, #4c1d95, #6366f1);
   border-radius: var(--radius-lg);
   color: #fff;
-  box-shadow: 0 15px 35px -10px rgba(79, 70, 229, 0.4);
-  position: relative;
   overflow: hidden;
+  box-shadow: 0 15px 35px -10px rgba(79, 70, 229, 0.4);
+}
+.hero-section {
+  padding: 3rem 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 .page-header::before {
   content: "";
@@ -163,82 +169,14 @@ section h2 {
   border-radius: 50%;
   filter: blur(40px);
 }
-.page-header-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-}
-.page-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 0.4rem 0.9rem;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.page-title {
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-bottom: 0.25rem;
-}
-.page-subtitle {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.btn-back,
-.btn-add {
-  position: relative;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
-  font-weight: 600;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  white-space: nowrap;
-}
-.btn-back {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-}
-.btn-back:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-}
-.btn-add {
-  background: #fff;
-  color: var(--primary-dark);
-}
-.btn-add:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* =========================================
-   5. HERO SECTION (Dashboard)
-   ========================================= */
-.hero-section {
-  position: relative;
-  padding: 3rem 2rem;
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, #1e1b4b, #4c1d95, #6366f1);
-  border-radius: var(--radius-lg);
-  color: #fff;
-  overflow: hidden;
-  box-shadow: 0 15px 35px -10px rgba(79, 70, 229, 0.4);
-}
+.page-header-content,
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 600px;
 }
+
+.page-badge,
 .hero-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
@@ -246,64 +184,51 @@ section h2 {
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.hero-badge {
+  margin-bottom: 1rem;
+}
+
+.page-title,
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 2rem;
-  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 0.75rem;
   letter-spacing: -1px;
 }
+
+.page-subtitle,
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #fbbf24, #f472b6, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero-subtitle {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 1.5rem;
-  max-width: 500px;
-}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.btn-primary,
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.85rem 1.5rem;
-  border-radius: var(--radius);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: var(--transition);
-}
-.btn-primary {
-  background: #fff;
-  color: var(--primary-dark);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-.btn-primary:hover {
-  transform: translateY(-3px);
-  color: var(--primary-dark);
-}
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
-  color: #fff;
-}
-
+/* Dekorasi blob (hanya di hero dashboard) */
 .hero-decoration {
   position: absolute;
   inset: 0;
@@ -341,7 +266,62 @@ section h2 {
 }
 
 /* =========================================
-   6. SECTION HEADER & STATS CARDS
+   5. TOMBOL-Tombol (Banner & Hero)
+   ========================================= */
+.btn-back,
+.btn-add,
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.btn-back {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-add,
+.btn-primary {
+  background: #fff;
+  color: var(--primary-dark);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.btn-add:hover,
+.btn-primary:hover {
+  transform: translateY(-2px);
+  color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   6. SECTION HEADER
    ========================================= */
 .section-header {
   margin: 2.5rem 0 1rem;
@@ -358,6 +338,9 @@ section h2 {
   font-size: 0.9rem;
 }
 
+/* =========================================
+   7. KARTU STATISTIK & QUICK ACTIONS
+   ========================================= */
 .stats-section,
 .quick-actions {
   display: grid;
@@ -369,43 +352,98 @@ section h2 {
   margin-bottom: 2rem;
 }
 
-.stat-card {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+.stat-card,
+.action-card {
+  position: relative;
   background: #fff;
   padding: 1.5rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: var(--transition);
-  position: relative;
   overflow: hidden;
 }
-.stat-card:hover {
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.stat-card:hover,
+.action-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: #c7d2fe;
 }
-.stat-icon {
-  width: 55px;
-  height: 55px;
+
+.action-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #a855f7);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+.action-card:hover::after {
+  transform: scaleX(1);
+}
+
+.stat-icon,
+.mini-stat-icon,
+.info-icon,
+.form-card-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  font-size: 1.5rem;
   flex-shrink: 0;
 }
-.stat-icon-purple {
+.stat-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  font-size: 1.5rem;
+}
+.mini-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+}
+.info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+.form-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  font-size: 1.5rem;
+}
+
+.stat-icon-purple,
+.mini-stat-icon,
+.form-card-icon,
+.info-icon-purple {
   background: linear-gradient(135deg, #ede9fe, #ddd6fe);
 }
-.stat-icon-blue {
+.stat-icon-blue,
+.info-icon-blue {
   background: linear-gradient(135deg, #dbeafe, #bfdbfe);
 }
 .stat-icon-green {
   background: linear-gradient(135deg, #d1fae5, #a7f3d0);
 }
+.info-icon-white {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .stat-info h3 {
   font-size: 0.8rem;
   font-weight: 600;
@@ -433,40 +471,7 @@ section h2 {
   color: #94a3b8;
 }
 
-/* =========================================
-   7. QUICK ACTIONS CARDS
-   ========================================= */
-.action-card {
-  position: relative;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  display: block;
-  overflow: hidden;
-}
-.action-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), #a855f7);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s;
-}
-.action-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: #c7d2fe;
-}
-.action-card:hover::after {
-  transform: scaleX(1);
-}
+/* Action Card */
 .action-icon {
   font-size: 1.75rem;
   margin-bottom: 0.75rem;
@@ -502,7 +507,7 @@ section h2 {
 }
 
 /* =========================================
-   8. FORM GRID & CARD
+   8. FORM (Grid + Card + Input)
    ========================================= */
 .form-grid {
   display: grid;
@@ -525,17 +530,6 @@ section h2 {
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
   border-bottom: 2px dashed var(--border);
-}
-.form-card-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-  border-radius: 14px;
-  font-size: 1.5rem;
-  flex-shrink: 0;
 }
 .form-card-header h2 {
   font-size: 1.25rem;
@@ -592,22 +586,25 @@ section h2 {
   border-top: 2px dashed var(--border);
   flex-wrap: wrap;
 }
-.btn-submit {
-  flex: 1;
-  min-width: 180px;
+.btn-submit,
+.btn-reset {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
   padding: 0.9rem 1.5rem;
-  background: linear-gradient(135deg, var(--primary), #8b5cf6);
-  color: #fff;
   border: none;
   border-radius: var(--radius);
-  font-size: 0.95rem;
   font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: var(--transition);
+}
+.btn-submit {
+  flex: 1;
+  min-width: 180px;
+  background: linear-gradient(135deg, var(--primary), #8b5cf6);
+  color: #fff;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 .btn-submit:hover {
@@ -615,18 +612,9 @@ section h2 {
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
 }
 .btn-reset {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.9rem 1.5rem;
   background: #f1f5f9;
   color: var(--text-muted);
-  border: none;
-  border-radius: var(--radius);
   font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
 }
 .btn-reset:hover {
   background: #e2e8f0;
@@ -654,25 +642,6 @@ section h2 {
 .info-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-}
-.info-icon {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-}
-.info-icon-purple {
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-}
-.info-icon-blue {
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-}
-.info-icon-white {
-  background: rgba(255, 255, 255, 0.2);
 }
 .info-card h3 {
   font-size: 1rem;
@@ -728,8 +697,6 @@ section h2 {
   background: linear-gradient(135deg, #1e1b4b, #4c1d95);
   color: #fff;
   border: none;
-  position: relative;
-  overflow: hidden;
 }
 .info-card-gradient h3 {
   color: #fff;
@@ -740,7 +707,7 @@ section h2 {
 }
 
 /* =========================================
-   10. MINI STATS
+   10. MINI STATS (halaman list)
    ========================================= */
 .mini-stats {
   display: grid;
@@ -762,17 +729,6 @@ section h2 {
 .mini-stat:hover {
   transform: translateY(-3px);
   border-color: #c7d2fe;
-}
-.mini-stat-icon {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-  border-radius: 12px;
-  font-size: 1.3rem;
-  flex-shrink: 0;
 }
 .mini-stat-label {
   font-size: 0.7rem;
@@ -992,7 +948,7 @@ td b {
 }
 
 /* =========================================
-   15. FLASH MESSAGE
+   15. FLASH MESSAGE (Jobsheet 07)
    ========================================= */
 #flash-container {
   margin-bottom: 1.25rem;
@@ -1045,39 +1001,7 @@ td b {
 }
 
 /* =========================================
-   16. TOAST
-   ========================================= */
-.toast-stack {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.toast {
-  background: rgba(15, 23, 42, 0.95);
-  color: #fff;
-  padding: 0.9rem 1.5rem;
-  border-radius: var(--radius);
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid var(--primary);
-  animation: slideInRight 0.3s ease-out;
-}
-.toast-danger {
-  border-left-color: #ef4444;
-}
-.toast-fade {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.3s;
-}
-
-/* =========================================
-   17. MODAL
+   16. MODAL KONFIRMASI HAPUS
    ========================================= */
 .modal-overlay {
   position: fixed;
@@ -1137,12 +1061,11 @@ td b {
 }
 .btn-danger:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
   color: #fff;
 }
 
 /* =========================================
-   18. FOOTER
+   17. FOOTER
    ========================================= */
 footer {
   text-align: center;
@@ -1159,7 +1082,7 @@ footer {
 }
 
 /* =========================================
-   19. ANIMATIONS
+   18. ANIMASI
    ========================================= */
 @keyframes fadeIn {
   from {
@@ -1169,16 +1092,6 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 @keyframes scaleUp {
@@ -1202,7 +1115,7 @@ footer {
 }
 
 /* =========================================
-   20. RESPONSIVE
+   19. RESPONSIVE
    ========================================= */
 @media (max-width: 1024px) {
   .form-grid {
