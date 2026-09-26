@@ -3,6 +3,7 @@
 -- ============================================
 CREATE DATABASE seni_theatrisic;
 
+
 CREATE TABLE seni (
     id          BIGSERIAL PRIMARY KEY,
     no_divisi   VARCHAR(10)  NOT NULL,
