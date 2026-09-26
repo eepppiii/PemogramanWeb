@@ -3,19 +3,6 @@
 -- ============================================
 CREATE DATABASE seni_theatrisic;
 
--- ============================================
--- 2. PINDAH KE DATABASE BARU
--- ============================================
--- Cara 1 (DBeaver): 
---   Di panel kiri, klik kanan "Databases" → Refresh → 
---   Klik kanan "seni_theatrisic" → Set as Active Database
--- Cara 2 (SQL):
---   Setelah aktif, jalankan script di bawah ini
--- ============================================
-
--- ============================================
--- 3. BUAT TABEL "seni"
--- ============================================
 CREATE TABLE seni (
     id          BIGSERIAL PRIMARY KEY,
     no_divisi   VARCHAR(10)  NOT NULL,
