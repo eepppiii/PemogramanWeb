@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Seni — Seni Theatrisic</title>
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Seni Theatrisic</h1>
+
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="list.html">Daftar Seni</a></li>
+          <li><a href="tambah.html">Tambah Seni</a></li>
+          <li><a href="../Anggota/list.html">Daftar Anggota</a></li>
+          <li><a href="../Anggota/tambah.html">Tambah Anggota</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tambah Seni</h2>
+        <p class="section-note">Catat divisi seni baru di bawah UKM Theatrisic.</p>
+
+        <div class="panel">
+          <form action="" method="POST">
+            <p>
+              <label for="no_divisi">No. Divisi</label>
+              <input type="number" name="no_divisi" id="no_divisi" required />
+            </p>
+            <p>
+              <label for="nama_divisi">Nama Divisi</label>
+              <input type="text" name="nama_divisi" id="nama_divisi" placeholder="Contoh: Teater, Tari, Band" required />
+            </p>
+            <p>
+              <label for="keterangan">Keterangan</label>
+              <input type="text" name="keterangan" id="keterangan" placeholder="Deskripsi singkat divisi" />
+            </p>
+            <p>
+              <label for="tahun">Tahun Terbit</label>
+              <input type="number" name="tahun" id="tahun" placeholder="Tahun divisi berdiri" />
+            </p>
+            <p>
+              <button type="submit">Simpan</button>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Seni Theatrisic &mdash; Jobsheet 1</p>
+    </footer>
+  </body>
+</html>

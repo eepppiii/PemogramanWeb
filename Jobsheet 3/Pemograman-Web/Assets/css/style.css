@@ -1,0 +1,637 @@
+/* ============================================================
+   Seni Theatrisic — Playbill Theme
+   A stage-program aesthetic: deep curtain maroon, brass gold,
+   warm program-paper cream. Built for UKM Theatrisic's five
+   art divisions and member roster.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --curtain: #6f1f2b;
+  --curtain-deep: #4c141d;
+  --stage-black: #1c1512;
+  --gold: #c39a3e;
+  --gold-bright: #dcb75c;
+  --paper: #f3ead8;
+  --paper-panel: #faf5e9;
+  --ink: #2a211b;
+  --ink-muted: #6f6153;
+  --line: #ddceac;
+  --danger: #8c2f2f;
+  --danger-soft: #f6e6e4;
+  --radius: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------------- Header / Marquee ---------------- */
+
+header {
+  background: var(--curtain);
+  background-image: linear-gradient(180deg, var(--curtain) 0%, var(--curtain-deep) 100%);
+  border-bottom: 3px solid var(--gold);
+  padding: 1.1rem 1.75rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: var(--paper);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Hamburger (mobile) */
+.menu-checkbox {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+  color: var(--gold-bright);
+  font-size: 1.7rem;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--paper);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+@media (max-width: 780px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  nav {
+    flex-basis: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.15rem;
+    padding-top: 0.75rem;
+  }
+
+  .menu-checkbox:checked ~ nav {
+    max-height: 320px;
+  }
+}
+
+/* ---------------- Layout ---------------- */
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2.5rem 1.75rem 4rem;
+}
+
+section + section {
+  margin-top: 2.5rem;
+}
+
+section > h2 {
+  font-size: 1.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.section-note {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0.35rem;
+}
+
+.section-header .section-note {
+  margin-bottom: 0;
+}
+
+/* Program panel — the flat, printed-card look (no drop shadows) */
+.panel {
+  background: var(--paper-panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+/* ---------------- Hero (Beranda) ---------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.5rem 0 1rem;
+}
+
+.hero .eyebrow-line {
+  color: var(--curtain);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.hero h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  max-width: 46ch;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: var(--stage-black);
+  border: 1px solid var(--curtain);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  color: var(--paper);
+}
+
+.hero-card .divisi-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(243, 234, 216, 0.14);
+  font-size: 0.95rem;
+}
+
+.hero-card .divisi-row:last-child {
+  border-bottom: none;
+}
+
+.hero-card .divisi-row span:first-child {
+  font-family: 'Fraunces', serif;
+  color: var(--gold-bright);
+}
+
+.hero-card .divisi-row span:last-child {
+  color: rgba(243, 234, 216, 0.7);
+}
+
+@media (max-width: 780px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+  }
+}
+
+/* Stat strip */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.stat-strip .stat {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  background: var(--paper-panel);
+}
+
+.stat .stat-value {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: var(--curtain);
+}
+
+.stat .stat-label {
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 780px) {
+  .stat-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- Toolbar / search ---------------- */
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.toolbar .result-count {
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.toolbar-left {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-select {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(195, 154, 62, 0.22);
+}
+
+.search-field {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+.search-field svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+
+.search-field input {
+  width: 100%;
+  padding: 0.55rem 0.8rem 0.55rem 2.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-field input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(195, 154, 62, 0.22);
+}
+
+.empty-row {
+  display: none;
+}
+
+.empty-row td {
+  text-align: center;
+  color: var(--ink-muted);
+  padding: 2.5rem 0.9rem;
+  font-style: italic;
+}
+
+.empty-row svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 0.6rem;
+  color: var(--line);
+}
+
+/* ---------------- Tables (cast-list style) ---------------- */
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  padding: 0.7rem 0.9rem;
+  border-bottom: 2px solid var(--gold);
+}
+
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+th.sortable:hover {
+  color: var(--curtain);
+}
+
+th.sortable .sort-arrow {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--gold);
+  transition: transform 0.2s ease;
+}
+
+th.sortable[data-dir="desc"] .sort-arrow {
+  transform: rotate(180deg);
+}
+
+tbody tr {
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+tbody td {
+  padding: 0.95rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+tbody tr:hover td {
+  background: rgba(195, 154, 62, 0.08);
+}
+
+tbody td:nth-child(2) {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+}
+
+/* Division color dot */
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.dot-theater { background: var(--curtain); }
+.dot-psm { background: #a8842f; }
+.dot-tari { background: #5f6f4d; }
+.dot-rupa { background: #43597a; }
+.dot-band { background: #7a4327; }
+
+/* Year chip */
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(195, 154, 62, 0.16);
+  color: var(--curtain-deep);
+  border: 1px solid rgba(195, 154, 62, 0.35);
+}
+
+/* Divisi badges (Anggota table) */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.badge-theater { background: var(--curtain); }
+.badge-psm { background: #a8842f; }
+.badge-tari { background: #5f6f4d; }
+.badge-rupa { background: #43597a; }
+.badge-band { background: #7a4327; }
+
+/* Name + avatar */
+.avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--stage-black);
+  color: var(--gold-bright);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------------- Buttons ---------------- */
+
+button,
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+button svg,
+.btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Default action buttons inside tables: Edit / Hapus */
+td button {
+  margin-right: 0.4rem;
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.84rem;
+}
+
+td button:first-child:hover {
+  border-color: var(--gold);
+  color: var(--curtain);
+}
+
+td button:last-child {
+  border-color: var(--danger-soft);
+  color: var(--danger);
+}
+
+td button:last-child:hover {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+}
+
+/* Primary / submit buttons */
+button[type="submit"],
+.btn-primary {
+  background: var(--curtain);
+  color: var(--paper);
+  border-color: var(--curtain);
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+  background: var(--curtain-deep);
+  border-color: var(--curtain-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--gold);
+  color: var(--curtain);
+}
+
+.btn-ghost:hover {
+  background: var(--gold);
+  color: var(--stage-black);
+}
+
+/* ---------------- Forms ---------------- */
+
+form {
+  max-width: 480px;
+}
+
+form p {
+  margin-bottom: 1.15rem;
+}
+
+label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(195, 154, 62, 0.22);
+}
+
+/* ---------------- Footer ---------------- */
+
+footer {
+  background: var(--stage-black);
+  color: rgba(243, 234, 216, 0.6);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  border-top: 3px solid var(--gold);
+}
